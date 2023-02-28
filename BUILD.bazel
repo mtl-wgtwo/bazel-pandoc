@@ -11,24 +11,24 @@ toolchain_type(
 
 pandoc_toolchain(
     compatible_with = [
-        "@bazel_tools//platforms:linux",
-        "@bazel_tools//platforms:x86_64",
+        "@platforms//os:linux",
+        "@platforms//cpu:x86_64",
     ],
     platform = "linux-x86_64",
 )
 
 pandoc_toolchain(
     compatible_with = [
-        "@bazel_tools//platforms:osx",
-        "@bazel_tools//platforms:x86_64",
+        "@platforms//os:osx",
+        "@platforms//cpu:x86_64",
     ],
     platform = "macOS",
 )
 
 pandoc_toolchain(
     compatible_with = [
-        "@bazel_tools//platforms:osx",
-        "@bazel_tools//platforms:aarch64",
+        "@platforms//os:osx",
+        "@platforms//cpu:aarch64",
     ],
     platform = "osx-arm",
 )
