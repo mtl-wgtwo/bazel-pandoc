@@ -41,6 +41,7 @@ def pandoc_repositories():
         url = "https://github.com/mtl-wgtwo/bazel-pandoc/releases/download/pandoc-{v}/pandoc-{v}-osx-arm.zip".format(v = PANDOC_VERSION),
     )
 
+def pandoc_register_toolchains():
     native.register_toolchains(
         "@bazel_pandoc//:pandoc_toolchain_linux-x86_64",
         "@bazel_pandoc//:pandoc_toolchain_macOS",

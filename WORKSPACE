@@ -12,6 +12,8 @@ http_archive(
     ],
 )
 
-load("//:repositories.bzl", "pandoc_repositories")
+load("//:repositories.bzl", "pandoc_register_toolchains", "pandoc_repositories")
 
 pandoc_repositories()
+
+pandoc_register_toolchains()

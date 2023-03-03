@@ -1,0 +1,9 @@
+module(name = "bazel_pandoc", version="")
+
+# -- bazel_dep definitions -- #
+
+non_module_deps = use_extension("//:non_module_deps.bzl", "non_module_deps")
+use_repo(non_module_deps, "pandoc_bin_linux-x86_64")
+use_repo(non_module_deps, "pandoc_bin_macOS")
+use_repo(non_module_deps, "pandoc_bin_osx-arm")
+# End of extension `non_module_deps`
