@@ -1,0 +1,20 @@
+from: markdown
+to: docx
+
+input-files:
+  - ${.}/hello.md
+
+output-file: doc_test.docx
+reference-doc: ${.}/reference.docx
+
+standalone: true
+number-sections: true
+self-contained: true
+data-dir: .
+metadata:
+  title: "Test"
+  subtitle: "Test"
+  author: "Working Group Two"
+toc: true
+resource-path:
+  - .

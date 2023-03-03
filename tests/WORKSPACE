@@ -1,0 +1,12 @@
+workspace(name = "pandoc_tests")
+
+local_repository(
+    name = "bazel_pandoc",
+    path = "../",
+)
+
+load("@bazel_pandoc//:repositories.bzl", "pandoc_register_toolchains", "pandoc_repositories")
+
+pandoc_repositories()
+
+pandoc_register_toolchains()

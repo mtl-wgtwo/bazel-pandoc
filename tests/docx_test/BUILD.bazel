@@ -1,0 +1,8 @@
+load("@bazel_pandoc//:pandoc.bzl", "pandoc")
+
+pandoc(
+    name = "docx_test",
+    srcs = glob(["*.md"] + ["reference.docx"]),
+    defaults_file = "defaults.yaml",
+    output = "docx_test.docx",
+)

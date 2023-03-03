@@ -1,0 +1,5 @@
+bazel_dep(name = "bazel_pandoc", version = "", repo_name = "bazel_pandoc")
+local_path_override(
+    module_name = "bazel_pandoc",
+    path = "..",
+)

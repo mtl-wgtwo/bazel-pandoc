@@ -1,9 +1,16 @@
-module(name = "bazel_pandoc", version="")
+module(name = "bazel_pandoc", version = "")
 
 # -- bazel_dep definitions -- #
+bazel_dep(name = "platforms", version = "0.0.4")
 
 non_module_deps = use_extension("//:non_module_deps.bzl", "non_module_deps")
 use_repo(non_module_deps, "pandoc_bin_linux-x86_64")
 use_repo(non_module_deps, "pandoc_bin_macOS")
 use_repo(non_module_deps, "pandoc_bin_osx-arm")
+
 # End of extension `non_module_deps`
+register_toolchains(
+    "@bazel_pandoc//:pandoc_toolchain_linux-x86_64",
+    "@bazel_pandoc//:pandoc_toolchain_macOS",
+    "@bazel_pandoc//:pandoc_toolchain_osx-arm",
+)
